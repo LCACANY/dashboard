@@ -263,4 +263,7 @@ h6{
     .trending div img{
         justify-self: end;
     }
+    .mainprofil{
+        grid-template-columns: 1fr 4fr;
+    }
   }
