@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+
+
+}
+.header{
+    position: sticky;
+    top: 0;
+    grid-column: 2/-1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    background-color: white;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.sidebar{
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    min-width: 260px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 30px;
+    gap: 50px;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+    padding-bottom: 0;
+}
+.branding{
+    flex: 1;
+}
+span{
+    align-self: end;
+    padding-bottom: 8px;
+}
+.home{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.dashboard{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+.maincontent{
+    background-color: rgb(230, 230, 230);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    overflow-y: auto; /* this means that the maincontent scroll independatly from the page */
+}
+.projects{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: auto auto 1fr;
+    grid-auto-rows: 1fr;
+    padding: 1em;
+    gap: 1em 2em;
+}
+.project{
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    grid-template-rows: 2fr 1fr;
+    border-radius: .6em ;
+    background-color: white;
+    box-shadow: 0 0 5px 3px rgb(0, 0, 0, 0.1);
+    z-index: 2;
+    max-height: 300px;
+}
+.textcontent{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+}
+h4{
+    grid-column: 1/-1;
+    font-size: 25px;
+}
+.colorblock{
+    background: #0284c7;
+    grid-row: 1/-1;
+    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em;
+    width: 10px;
+}
+.searchicon,.bellicon,.dashboardicon{
+    height: 35px;
+    cursor: pointer;
+}
+.profilicon{
+    height: 55px;
+}
+#searchinput{
+   border: 0;
+   background-color: rgb(226, 233, 240);
+    border-radius: 20px;
+    min-width: 20em;
+    max-width: 55em;
+    height: 2.5em;
+    flex: 1;
+}
+input:focus {  
+    outline: none;
+}
+.searchandicon,.profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 5px;
+    
+}
+.profil{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.mainprofil{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+.mainprofilimg{
+    grid-row: 1/3;
+    justify-self: end;
+    align-self: center;
+}
+.mainprofilh5{
+    align-self: end;
+    padding: 5px;
+}
+.mainprofilh2{
+    padding-bottom: 5px;
+}
+button{
+    background-color: #0ea5e9;
+    border: 0;
+    padding: 12px 25px ;
+    border-radius: 20px;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px ;
+}
+.navigation,.branding{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.home:hover{
+    background-color: #48b9ee;
+    border-radius: 12px;
+}
+.announces-and-trending{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 1em;
+}
+.announces,.trending{
+ background-color: rgb(255,255,255,0.5);
+ box-shadow: 0 0 5px 3px rgb(0, 0, 0, 0.1);
+ border-radius: 1em;
+ display: flex;
+ flex-direction: column;
+ padding: 20px;
+ max-height: 550px;
+}
+.announces{
+    gap: 20px;
+}
+h5{
+    font-size: 18px;
+    padding: 5px;
+}
+.line{
+    background-color: #9b9b9b;
+    height: 1px;  
+}
+p{
+    color: rgb(114, 114, 114);
+}
+.trending div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+.trending div img{
+    grid-row: 1/-1;
+
+}
+h6{
+    align-self: end;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+.actionblock{
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    padding-right: 20px;
+}
+.actionblock img{
+    width: 30px;
+}
